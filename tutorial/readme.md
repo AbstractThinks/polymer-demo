@@ -27,3 +27,6 @@ Ploymer 是 web component native化的规范的项目代码
         组件被父组件设置属性时触发，只有使用setAttribute()方式设置属性才会触发，切记！（elementInstance.attr = xxx, <my-element att="xxx"></my-element>都不会触发它）
 6. detached
         当被父组件removeChild时候触发
+
+
+[参考](https://segmentfault.com/a/1190000003834899)
