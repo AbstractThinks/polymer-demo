@@ -1,0 +1,79 @@
+
+
+
+
+<dom-module id="binding-data">
+
+        <template >
+                <div class="">
+                        This is binding-data <b>{{ owner }}</b>'s element.
+                </div>
+        </template>
+
+        <script type="text/javascript">
+                Polymer({
+                        is : "binding-data",
+                        ready : function () {
+                                this.owner = "Jesse"
+                        }
+                })
+        </script>
+
+
+
+</dom-module>
+
+
+<dom-module id="binding-data-single">
+
+        <template >
+                <div class="">
+                        This is binding-data-single <b>{{ owner }}</b>'s element.
+                </div>
+        </template>
+
+        <script type="text/javascript">
+                Polymer({
+                        is : "binding-data-single",
+                        properties: {
+                                // declare the owner property
+                                owner: {
+                                        type: String,
+                                        value: "Jesse"  //默认值
+                                }
+                        }
+                })
+        </script>
+
+
+
+</dom-module>
+
+
+
+<dom-module id="binding-data-bidirection">
+
+        <template >
+                <!-- :: 符号后的是事件名 -->
+                <input value="{{owner::input}}" placeholder="Your name here...">
+                <div class="">
+                        This is binding-data-bidirection <b>{{ owner }}</b>'s element.
+                </div>
+        </template>
+
+        <script type="text/javascript">
+                Polymer({
+                        is : "binding-data-bidirection",
+                        properties: {
+                                // declare the owner property
+                                owner: {
+                                        type: String,
+                                        value: "Jesse"  //默认值
+                                }
+                        }
+                })
+        </script>
+
+
+
+</dom-module>

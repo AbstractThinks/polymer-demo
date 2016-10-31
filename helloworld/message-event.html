@@ -1,0 +1,35 @@
+
+
+<dom-module id="on-event-name">
+        <template>
+                <button id="myBtn" on-click="handleClick">on-event-name-Alert</button>
+        </template>
+        <script>
+                Polymer({
+                        is: "on-event-name",
+                        handleClick: function(e) {
+                                alert("clicked by handleClick ");
+                        }
+                });
+        </script>
+</dom-module>
+
+
+
+<dom-module id="event-listener">
+        <template>
+                <button id="eventListenerBtn">event-listener-Alert</button>
+        </template>
+        <script>
+                Polymer({
+                        is: "event-listener",
+                        eventListenerClick: function(e) {
+                                alert("clicked by eventListenerClick");
+                        },
+                        listeners: {
+                                // 'click': 'eventListenerClick',
+                                'eventListenerBtn.click': 'eventListenerClick'
+                        }
+                });
+        </script>
+</dom-module>

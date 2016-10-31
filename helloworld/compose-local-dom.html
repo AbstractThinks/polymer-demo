@@ -1,0 +1,33 @@
+<!-- <link rel="import" href="../bower_components/polymer/polymer.html"> -->
+<dom-module id="compose-local-dom">
+
+        <template >
+                        <style>
+                                div {
+                                        display: inline-block;
+                                        background-color:  #ccc;
+                                }
+                        </style>
+                        <div>
+                                <p>
+                                        this is compose-local-dom  part
+                                </p>
+                                <!-- 这里使用了content标签-->
+                                <content></content>
+                                <!--子组件或者标签将被插入到这里 -->
+                                <!--
+                                        例： <compose-local-dom>
+                                                        <p>...<p>
+                                                </compose-local-dom>
+
+                                                p标签中的内容将被插入到content中
+                                -->
+                        </div>
+        </template>
+        <script type="text/javascript">
+                Polymer({
+                        is : "compose-local-dom"
+                });
+        </script>
+
+</dom-module>

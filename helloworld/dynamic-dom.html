@@ -1,0 +1,26 @@
+<dom-module id="dynamic-dom">
+        <template>
+        <p>
+                <b>{{helloMessage}} </b>
+                 this is dynamic dom
+        </p>
+      </template>
+        <script>
+                // 通过执行方法var dynamicDomElement = new dynamicDom(); 创建实例
+                dynamicDom = Polymer({
+                        is: 'dynamic-dom',
+                        // properties: {
+                        //         helloMessage: { value: "hi", type: "string" }
+                        //  },
+                         // 定义factoryImpl借口，构造时将helloMessage重新赋值
+                        factoryImpl: function (message) {
+                                if (message) {
+                                         this.helloMessage = message;
+                                } else {
+                                        this.helloMessage = "hi";
+                                }
+
+                          }
+                });
+        </script>
+</dom-module>

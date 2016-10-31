@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+                <title></title>
+                <link rel="import" href="../bower_components/polymer/polymer.html">
+                <link rel="import" href="./proto-element.html" >
+                <link rel="import" href="./local-dom.html" media="screen" title="no title">
+                <link rel="import" href="./compose-local-dom.html" media="screen" title="no title">
+                <link rel="import" href="./binding-data.html" media="screen" title="no title">
+                <link rel="import" href="./dynamic-dom.html" media="screen" title="no title">
+                <link rel="import" href="./extend-html-dom.html" media="screen" title="no title">
+                <link rel="import" href="./message-event.html" media="screen" title="no title">
+        </head>
+        <body>
+                <proto-element></proto-element>
+
+                <local-dom-element></local-dom-element>
+
+                <compose-local-dom>
+                        <img src="http://img05.tooopen.com/images/20150202/sy_80219211654.jpg" alt="" />
+                </compose-local-dom>
+
+                <binding-data></binding-data>
+
+                <binding-data-single owner="Alvin"></binding-data-single>
+
+                <binding-data-bidirection></binding-data-bidirection>
+
+                <script type="text/javascript">
+                        var dynamicDomElement = new dynamicDom();
+                        var dynamicDomElement2 = new dynamicDom("hello");
+                        document.getElementsByTagName("body")[0].appendChild(dynamicDomElement)
+                        document.getElementsByTagName("body")[0].appendChild(dynamicDomElement2)
+                </script>
+
+                <script type="text/javascript">
+                        var  myInput = document.createElement("input", "my-input");
+                        document.getElementsByTagName("body")[0].appendChild(myInput)
+                        // 或者 <input is="my-input" >
+                </script>
+                <on-event-name></on-event-name>
+                <event-listener></event-listener>
+        </body>
+</html>
