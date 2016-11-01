@@ -1,0 +1,33 @@
+<dom-module id="sub-element-style">
+
+        <style media="screen">
+                /* :host 是对宿主子容器进行设定 */
+                :host {
+                        display: block;
+                        border: 1px solid red;
+                }
+                /*  */
+                #child-element {
+                        background: blue;
+                }
+                /* .content-wrapper >::content 是对被插入的child标签进行设定  */
+                .content-wrapper >::content .special {
+                        background: silver;
+                }
+        </style>
+
+        <template id="">
+                <div id="child-element">
+                        In local DOM
+                </div>
+                <div class="content-wrapper">
+                        <content select=""></content>
+                </div>
+        </template>
+
+        <script type="text/javascript">
+                        Polymer({
+                                is : 'sub-element-style'
+                        });
+        </script>
+</dom-module>

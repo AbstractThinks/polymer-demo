@@ -4,6 +4,8 @@
         <head>
                 <meta charset="utf-8">
                 <title></title>
+                <!-- 垫片，ff和ie需要 -->
+                <!-- <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script> -->
                 <link rel="import" href="../bower_components/polymer/polymer.html">
                 <link rel="import" href="./proto-element.html" >
                 <link rel="import" href="./local-dom.html" media="screen" title="no title">
@@ -12,6 +14,7 @@
                 <link rel="import" href="./dynamic-dom.html" media="screen" title="no title">
                 <link rel="import" href="./extend-html-dom.html" media="screen" title="no title">
                 <link rel="import" href="./message-event.html" media="screen" title="no title">
+                <link rel="import" href="./style-dom.html" media="screen" title="no title">
         </head>
         <body>
                 <proto-element></proto-element>
@@ -42,5 +45,10 @@
                 </script>
                 <on-event-name></on-event-name>
                 <event-listener></event-listener>
+                <sub-element-style>
+                        <p class="special">
+                                this is child content
+                        </p>
+                </sub-element-style>
         </body>
 </html>
